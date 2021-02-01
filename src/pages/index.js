@@ -7,7 +7,6 @@ const IndexPage = () => (
   <div>
     <SEO title="Home" />
     <HeroSection />
-    HEY
   </div>
 )
 
