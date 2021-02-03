@@ -10,7 +10,7 @@ http://github.com/vamoss
 ******************/
 
 const sketchBg = p5js => {
-  const gridSize = 15;
+  const gridSize = 30;
 
   var graphs = [];
 
@@ -40,13 +40,16 @@ const sketchBg = p5js => {
   }
 
   p5js.setup = () => {
-    p5js.createCanvas(p5js.windowWidth, p5js.windowHeight);
-    p5js.pixelDensity(1);
 
-    scaleToCam = p5js.max(camWidth, camHeight) / p5js.max(p5js.width, p5js.height);
+    p5js.createCanvas(p5js.windowWidth, p5js.windowHeight);
+
+    p5js.pixelDensity(1);
+    
+    scaleToCam = p5js.min(camWidth/p5js.width, camHeight/p5js.height);
     
     for(var i = 0; i < 5; i++){
       graph = p5js.createGraphics(gridSize, gridSize);
+      graph.pixelDensity(1);
       switch(i){
       case 0:
         //dot
@@ -57,21 +60,21 @@ const sketchBg = p5js => {
       case 1:
         //circle
         graph.stroke("#FFF");//"#73b4cc");
-        graph.strokeWeight(4);
+        graph.strokeWeight(4 * gridSize/15);
         graph.noFill();
         graph.circle(gridSize/2, gridSize/2, gridSize * 2 / 3);
       break;
       case 2:
         //line
         graph.stroke("#FFF");//"#69a3c0");
-        graph.strokeWeight(4);
+        graph.strokeWeight(4 * gridSize/15);
         graph.noFill();
         graph.line(gridSize/2, 0, gridSize/2, gridSize);
       break;
       case 3:
         //cross
         graph.stroke("#FFF");//"#68a0be");
-        graph.strokeWeight(4);
+        graph.strokeWeight(4 * gridSize/15);
         graph.noFill();
         graph.line(0, gridSize/2, gridSize, gridSize/2);
         graph.line(gridSize/2, 0, gridSize/2, gridSize);
@@ -100,12 +103,14 @@ const sketchBg = p5js => {
       }
     }else if(mode == MODES.WEBCAM){
       camera.loadPixels();
-      p5js.push();
-      p5js.translate((p5js.width - camWidth/scaleToCam)/2, (p5js.height - camHeight/scaleToCam)/2);
-      let gridSize2 = gridSize * 1.5;
+      //p5js.push();
+      var startX = -p5js.floor((p5js.width - camWidth/scaleToCam)/2 * scaleToCam);
+      var startY = -p5js.floor((p5js.height - camHeight/scaleToCam)/2 * scaleToCam);
+      //p5js.translate((p5js.width - camWidth/scaleToCam)/2, (p5js.height - camHeight/scaleToCam)/2);
+      let gridSize2 = gridSize / 1.25;
       let sampleSize = p5js.floor(gridSize2 * scaleToCam);
-      for (let x = 0; x < camWidth; x += sampleSize) {
-        for (let y = 0; y < camHeight; y += sampleSize) {
+      for (let x = startX; x < camWidth - startX; x += sampleSize) {
+        for (let y = startY; y < camHeight - startY; y += sampleSize) {
           const i = p5js.floor((y * camWidth) + x) * 4;
           const r = camera.pixels[i];
           const g = camera.pixels[i + 1];
@@ -113,10 +118,10 @@ const sketchBg = p5js => {
           let pattern = p5js.floor((1 - (r+g+b) / maxColor) * (graphs.length-1));
           // let h = hue(color(r, g, b));
           // let pattern = floor((h / 360) * (graphs.length-1));
-          drawPattern(pattern, x / scaleToCam, y / scaleToCam, t, gridSize2);
+          drawPattern(pattern, (x - startX) / scaleToCam, (y - startY) / scaleToCam, t, gridSize2);
         }
       }
-      p5js.pop();
+      //p5js.pop();
     }
   }
 
