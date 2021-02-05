@@ -10,7 +10,7 @@ http://github.com/vamoss
 ******************/
 
 const sketchBg = p5js => {
-  const gridSize = 15;
+  const gridSize = 13;
 
   var graphs = [];
 
@@ -102,7 +102,7 @@ const sketchBg = p5js => {
       camera.loadPixels();
       p5js.push();
       p5js.translate((p5js.width - camWidth/scaleToCam)/2, (p5js.height - camHeight/scaleToCam)/2);
-      let gridSize2 = gridSize * 1.5;
+      let gridSize2 = gridSize * 1.2;
       let sampleSize = p5js.floor(gridSize2 * scaleToCam);
       for (let x = 0; x < camWidth; x += sampleSize) {
         for (let y = 0; y < camHeight; y += sampleSize) {

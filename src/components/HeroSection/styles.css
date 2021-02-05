@@ -1,10 +1,10 @@
 #sketchBg {
-  background: "#00FFFF";
   background: linear-gradient(
     45deg,
     rgba(255, 0, 255, 1) 0%,
     rgba(0, 255, 255, 1) 100%
   );
+  overflow-x: hidden;
 }
 
 #sketchBg canvas {
@@ -22,7 +22,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  background-color: #000;
+  background-color: #5577a1;
   border-radius: 20px;
   width: 100px;
   height: 34px;
@@ -50,7 +50,7 @@
 }
 
 #toggleMode.webcam {
-  background-color: #080;
+  background-color: #79eeb7;
 }
 
 #toggleMode.webcam svg {
