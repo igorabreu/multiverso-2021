@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Multiverso`,
-    description: `Creative coding and generative art brazilian festival`,
+    description: `Festival Multiverso - 2021 - 2a Edição`,
     author: `@gatsbyjs`,
   },
   plugins: [

@@ -175,7 +175,7 @@ XXXXXXXXXXXX
   p5js.setup = () => {
     SIZE *= p5js.windowWidth/1280;
 
-    p5js.createCanvas(p5js.windowWidth, 14 * SIZE);
+    p5js.createCanvas(p5js.windowWidth - 17, 14 * SIZE);
     p5js.pixelDensity(1);
     
     colors = [p5js.color("#8e9eca"), p5js.color("#5577a1")];

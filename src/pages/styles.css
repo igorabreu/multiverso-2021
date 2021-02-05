@@ -2,7 +2,11 @@ body,
 html {
   margin: 0;
   padding: 0;
-  overflow: hidden;
   font-family: "PT Mono", monospace;
   height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
