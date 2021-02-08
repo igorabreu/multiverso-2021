@@ -112,7 +112,7 @@ export const data = [
         name: "LAB Multiverso",
         participant:
           "Grupo de estudos mediado pelos artistas André Anastácio e Carlos Oliveira",
-        time: "15:00h",
+        time: "19:30h",
         details: "inscrições",
         link: 'https://docs.google.com/forms/d/1DlTlET7j5qYKXLuE2EH7fgKQGFFqmaZdeq8MQIjeSFY/',
       },
@@ -125,7 +125,7 @@ export const data = [
         name: "LAB Multiverso",
         participant:
           "Grupo de estudos mediado pelos artistas André Anastácio e Carlos Oliveira",
-        time: "15:00h",
+        time: "19:30h",
         details: "inscrições",
         link: 'https://docs.google.com/forms/d/1DlTlET7j5qYKXLuE2EH7fgKQGFFqmaZdeq8MQIjeSFY/',
       },
@@ -138,7 +138,7 @@ export const data = [
         name: "LAB Multiverso",
         participant:
           "Grupo de estudos mediado pelos artistas André Anastácio e Carlos Oliveira",
-        time: "15:00h",
+        time: "19:30h",
         details: "inscrições",
         link: 'https://docs.google.com/forms/d/1DlTlET7j5qYKXLuE2EH7fgKQGFFqmaZdeq8MQIjeSFY/',
       },
@@ -151,7 +151,7 @@ export const data = [
         name: "LAB Multiverso",
         participant:
           "Grupo de estudos mediado pelos artistas André Anastácio e Carlos Oliveira",
-        time: "15:00h",
+        time: "19:30h",
         details: "inscrições",
         link: 'https://docs.google.com/forms/d/1DlTlET7j5qYKXLuE2EH7fgKQGFFqmaZdeq8MQIjeSFY/',
       },
