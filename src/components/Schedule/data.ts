@@ -19,8 +19,8 @@ export const data = [
         participant:
           "Cinthia Mendonça / Malu Fragoso / Mediação: Marlus Araújo  ",
         time: "12:00h",
-        details: "youtube - em breve",
-        link: ''
+        details: "youtube",
+        link: 'https://www.youtube.com/watch?v=FOWMH3YPgw8'
       },
       {
         name: "Parceria/Evento | Noites de Processing",
@@ -41,8 +41,8 @@ export const data = [
         participant:
           "Cristiane Sanches / Mercia Britto / Mediação: Paula Brandão",
         time: "12:00h",
-        details: "youtube - em breve",
-        link: ''
+        details: "youtube",
+        link: 'https://www.youtube.com/watch?v=ZG2QvLIAJtM'
       },
       {
         name: "Oficina | mirAR: introdução à realidade aumentada",
@@ -61,8 +61,8 @@ export const data = [
           "Debate | Experiências culturais e subversões das tecnologias algorítmicas",
         participant: "Nina da Hora / Gabriel Pereira / Mediação: Amanda Jurno",
         time: "12:00h",
-        details: "youtube - em breve",
-        link: ''
+        details: "youtube",
+        link: 'https://www.youtube.com/watch?v=JO8AEMWtHXk'
       },
       {
         name: "Oficina | Programação criativa musical",
